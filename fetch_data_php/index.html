@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch Data Example</title>
+</head>
+<body>
+    <h1>Data from PHP</h1>
+    <div id="dataContainer">
+        <!-- Data will be inserted here -->
+    </div>
+
+    <script>
+        // Fetch data from the PHP script
+        fetch('data.php')
+            .then(response => {
+                // Check if the request was successful
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                // Parse the response as JSON
+                return response.json();
+            })
+            .then(data => {
+                // Use the data
+                console.log(data);
+                // Display the message in the HTML
+                document.getElementById('dataContainer').innerHTML = `
+                    <p>Message: ${data.message}</p>
+                    <p>Timestamp: ${data.timestamp}</p>
+                `;
+            })
+            .catch(error => {
+                // Handle any errors
+                console.error('There was a problem with the fetch operation:', error);
+                document.getElementById('dataContainer').innerHTML = `
+                    <p>Error: ${error.message}</p>
+                `;
+            });
+    </script>
+</body>
+</html>
