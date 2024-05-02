@@ -2,7 +2,7 @@
 
 
 $request = $_SERVER['REQUEST_URI'];
-echo $router = str_replace("/router_basicoo", "", $request);
+echo $router = str_replace("/router_basico", "", $request);
 
 $id = "";
 $arr = explode("/", $router);
