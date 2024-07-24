@@ -1,0 +1,10 @@
+you have to create an .htaccess file with the following lines:
+
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\\.]+)$ $1.php [NC,L]
+
+
+
+This simple solution will make your PHP URLs cleaner and more user-friendly. 
