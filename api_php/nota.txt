@@ -1,0 +1,7 @@
+llamar a las api asi:
+
+con id
+http://localhost/api_php/index.php?id=3
+
+sin id
+http://localhost/api_php/index.php
