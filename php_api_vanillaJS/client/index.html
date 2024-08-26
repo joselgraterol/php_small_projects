@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tasks app</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="formulario">
+            <form id="form-add">
+                <label for="title">Title</label>
+                <input type="text" id="title-add" placeholder="Title">
+                <label for="description">Description</label>
+                <input type="text" id="description-add" placeholder="Description">
+                <button type="submit">Add</button>
+                <button type="button" id="cancel-add">Cancel</button>
+            </form>
+
+            <form id="form-edit">
+                <label for="title">Title</label>
+                <input type="text" id="title-edit" placeholder="Title">
+                <label for="description">Description</label>
+                <input type="text" id="description-edit" placeholder="Description">
+                <button type="submit">Edit</button>
+                <button type="button" id="cancel-edit">Cancel</button>
+            </form>
+        </div>
+
+        <div class="tasks">
+            <h1>Tasks</h1>
+            <ul id="tasks"></ul>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
